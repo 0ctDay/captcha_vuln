@@ -1,0 +1,11 @@
+version: '2.0'
+
+services:
+  app:
+    image: crpi-3k5gato5pgtkwnbt.cn-beijing.personal.cr.aliyuncs.com/vulstest/java:8-redis
+    volumes:
+      - ./target/capture_demo-0.0.1-SNAPSHOT.jar:/usr/api.jar
+      - ./flag:/tmp/flag
+    ports:
+      - "8091:8091"
+    command: bash -c "service redis-server start && java -jar /usr/api.jar "
