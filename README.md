@@ -4,11 +4,13 @@
 训练学生面对验证码的渗透思路
 
 ## build
+
 ##### 修改
 1. 手动修改每个控制器中的密码
 2. 手动修改flag
 ##### 启动
 ```docker
+mvn clean package
 docker-compose up -d
 ```
 
